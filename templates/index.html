@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESG Rating Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="logo">
+        <h1>ESG Rating Predictor Selling Tool</h1>
+
+        <!-- Prediction Form -->
+        <form id="predict-form" class="form-card">
+
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="text" id="year" name="year">
+            </div>
+            <div class="form-group">
+                <label for="country">Country of Headquarters:</label>
+                <input type="text" id="country" name="country">
+            </div>
+            <div class="form-group">
+                <label for="industry_code">Standard Industry Classification Code:</label>
+                <input type="text" id="industry_code" name="industry_code">
+            </div>
+            <div class="form-group">
+                <label for="fiscal_year_end">Fiscal Year-end Month:</label>
+                <input type="text" id="fiscal_year_end" name="fiscal_year_end">
+            </div>
+            <div class="form-group">
+                <label for="long_term_debt">Long-Term Debt - Total:</label>
+                <input type="text" id="long_term_debt" name="long_term_debt">
+            </div>
+            <div class="form-group">
+                <label for="revenue">Revenue - Total:</label>
+                <input type="text" id="revenue" name="revenue">
+            </div>
+            <div class="form-group">
+                <label for="equity">Stockholders Equity - Total:</label>
+                <input type="text" id="equity" name="equity">
+            </div>
+            <div class="form-group">
+                <label for="shares_outstanding">Com Shares Outstanding - Issue:</label>
+                <input type="text" id="shares_outstanding" name="shares_outstanding">
+            </div>
+            <div class="form-group">
+                <label for="net_income">Net Income (Loss) - Consolidated:</label>
+                <input type="text" id="net_income" name="net_income">
+            </div>
+            <div class="form-group">
+                <label for="price_close">Price - Close Monthly:</label>
+                <input type="text" id="price_close" name="price_close">
+            </div>
+            <div class="form-group">
+                <label for="currency">Currency:</label>
+                <input type="text" id="currency" name="currency">
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+        <h2 id="result"></h2>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
